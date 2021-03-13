@@ -495,7 +495,7 @@ Open up index.html and find the section that looks like:
 
 **Git went ahead and modified the conflicted file to show us exactly which lines are afflicted**. The format of the above text show us the difference between the two versions of the file. 
 
-The section labeled <<<<<<< HEAD show us the version in the current branch, while the part after the ======= shows the version in the crazy branch.
+The section labeled `<<<<<<< HEAD` show us the version in the current branch, while the part after the `=======` shows the version in the crazy branch.
 
 # 	* [Resolve the Merge Conflicts](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
 
@@ -563,11 +563,11 @@ $ git branch -D crazy-alt
 Deleted branch crazy-alt (was d247771).
 ```
 
-Because we never merged crazy-alt into master, it is lost forever. However, the crazy branch is still accessible through its commits, which are now reachable via the master branch. That is to say, it is still part of the structure of the repository's history, even though we deleted our reference to it.
+**Because we never merged crazy-alt into master, it is lost forever**. However, the crazy branch is still accessible through its commits, which are now reachable via the master branch. That is to say, it is still part of the structure of the repository's history, even though we deleted our reference to it.
 
 ![Screen Shot 2020-05-25 at 19 38 28](https://user-images.githubusercontent.com/24994818/82849830-58901080-9ebf-11ea-9338-d8384871beac.png)
 
-Fast-forward merges are not reflected in the project history. This is the tangible distinction between fast-forward merges and 3-way merges. The next module will discuss the appropiate usage of both and the potential complications of a non-linear history.
+**Fast-forward merges are not reflected in the project history**. This is the tangible distinction between fast-forward merges and 3-way merges. The next module will discuss the appropiate usage of both and the potential complications of a non-linear history.
 
 
 #   * [Rename Branches Local and Remote](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
