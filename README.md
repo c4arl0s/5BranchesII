@@ -572,7 +572,7 @@ Fast-forward merges are not reflected in the project history. This is the tangib
 
 #   * [Rename Branches Local and Remote](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
 
-This is a new note about how to rename branches. I remember use it when I couldn't rebase a branch over master, so I have to rename my branch as master and master as old-master
+**This is a new note about how to rename branches**. I remember use it when I couldn't rebase a branch over master, so I have to rename my branch as master and master as old-master
 
 Checkout to the desired branch, this apply for local:
 
@@ -621,7 +621,7 @@ To https://github.com/c4arl0s/ToDoListApp.git
  * [new branch]      old-master -> old-master
 ```
 
-As you can see in Git hub, the old-master keeps appearing, the withoutStackViews branch also, Git didn't allow me to delete it from command line
+**As you can see in Git hub, the old-master keeps appearing, the withoutStackViews branch also, Git didn't allow me to delete it from command line**.
 
 ![Screen Shot 2020-06-12 at 12 55 19](https://user-images.githubusercontent.com/24994818/84532552-09622200-acac-11ea-93d6-18cbb079870a.png)
 
