@@ -22,11 +22,12 @@
 Now that you have covered the mechanics behind Git Branches, we can discuss the practical impact that they have on the software development process.
 Instead of introducing new commands, this module covers how the typical Git user applies this workflow to real projects, as well as some of the problems that arise in a branched environment.
 
-To git, a branch is a branch, but it is often useful to assign special meaning to different branches. For example, we have been using master as the stable branch for our example project, and we have also used a temporary branch to add some CSS formatting.
-Temporary branches like the latter are called topic branches because they exis to develop a certain topic branches later in this module.
+**To git, a branch is a branch, but it is often useful to assign special meaning to different branches**. 
 
-Amid our exploration of Git branches, we will also discover that some merges cannot "fast-forwarded"
-When the history of two branches diverges, a dedicated commit is required to combine the branches. This situation may also give rise to a merge conflict, which must be manually resolved before anything can be committed to the repository.
+> For example, we have been using master as the stable branch for our example project, and we have also used a temporary branch to add some CSS formatting.
+**Temporary branches like the latter are called topic branches because they exist to develop a certain topic branches later in this module**.
+
+Amid our exploration of Git branches, we will also discover that some merges cannot "fast-forwarded". When the history of two branches diverges, a dedicated commit is required to combine the branches. **This situation may also give rise to a merge conflict, which must be manually resolved before anything can be committed to the repository**.
 
 
 # 	* [Continue the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
@@ -54,30 +55,30 @@ e1bc771 add a rainbow to crazy.html
 6a442fc Create index page for the message
 ```
 
-The crazy branch is a longer-running type of topic branch called a feature branch.
-This is fitting, as it was created with the intention of developing a specific feature. It is also a term tht makes Git's contribution to the development workflow readly apparaent: branches enable you to focus on developing one clearly defined feature at a time
+**The crazy branch is a longer-running type of topic branch called a feature branch**.
+This is fitting, as it was created with the intention of developing a specific feature. It is also a term tht makes Git's contribution to the development workflow readly apparaent: branches enable you to focus on developing one clearly defined feature at a time.
 
 This brings us to my rule-thumb for using git branches:
 
-1. Create a new branch for each mayor addition to your project.
-2. Don't create a branch if you cannot give it a specific name.
+1. **Create a new branch for each mayor addition to your project**.
+2. **Don't create a branch if you cannot give it a specific name**.
 
 Following these simple guidelines will have a dramatic impact on your programming efficiency.
 
 
 # 	* [Merge the CSS Updates](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
 
-Note that CSS formatting we merged into master is nowhere to be found.
+**Note that CSS formatting we merged into master is nowhere to be found**.
 This presents a bit of a problem if we want to experiment to reflect these updates.
 Conveniently, Git let us merge changes into any branch (not just the master branch).
 So, we can pull the updates in with the familiar git merge command.
 Remember that merging only affects the checked-out branch.
 
 ```console
-$ git merge maste
+$ git merge master
 ```
 
-editing
+Editing
 
 ```vim
 Merge branch 'master' into crazy
@@ -97,22 +98,24 @@ Merge made by the 'recursive' strategy.
  create mode 100644 style.css
 ```
 
-As of Git 1.7.1.0, this will open your editor and prompt you for a message explaining why the commit was necessary.
-You can use the default Merge branch master into crazy. When you save and close the file, you will notice an extra commit in your project history. Recall that our first merge didn't add any new commits; it is just "fast-forwarded" the tip of the master branch. This was not the case for our new merge, which is shown below.
+**As of Git 1.7.1.0, this will open your editor and prompt you for a message explaining why the commit was necessary**.
+You can use the default Merge branch master into crazy. When you save and close the file, you will notice an extra commit in your project history. **Recall that our first merge didn't add any new commits; it is just "fast-forwarded" the tip of the master branch**. This was not the case for our new merge, which is shown below.
 
 ![Screen Shot 2020-05-24 at 11 50 02](https://user-images.githubusercontent.com/24994818/82759729-c7cd0e00-9db4-11ea-9b4b-8e97fc80512e.png)
 
 Take a moment to examine why the current merge could not be fast-forward one. 
 How Could Git have walked the crazy pointer over the tip of the master branch ?
-It is not possible without backtracking, which kind of defeats the idea of "fast-forwarding"
-We are left with a new way to combine brancges: the 3-way merge
+**It is not possible without backtracking, which kind of defeats the idea of "fast-forwarding"
+We are left with a new way to combine branches: the 3-way merge**.
 
-A 3-way merge occurs when you try to merge two branches whose history has diverged. It creates an extra merge commit to function as a link between the two branches.
-As a result, it has two parent commits. The above figure visualizes this with two arros originating from the tip of crazy. It is like saying "this commit comes from both the crazy branch and from master". After the merge, the crazy branch has access to both its history an the master history.
+**A 3-way merge occurs when you try to merge two branches whose history has diverged**. It creates an extra merge commit to function as a link between the two branches.
+**As a result, it has two parent commits**. The above figure visualizes this with two arrows originating from the tip of crazy. **It is like saying "this commit comes from both the crazy branch and from master**". After the merge, the crazy branch has access to both its history and the master history.
 
-The name comes from the internal method used to create the merge commit. Git looks at three commits (numbered in the above figure) to generate the final state of the merge.
+![3-way-merge](https://user-images.githubusercontent.com/24994818/111052208-baa20e00-841e-11eb-8b47-a00d9c285ce1.png)
 
-This kind of branch interaction is a big part of what makes Git such a powerful development tool. We can not only create independent lines of development, but we can also share information between them by tying together their stories with a 3-way merge.
+The name comes from the internal method used to create the merge commit. **Git looks at three commits (numbered in the above figure) to generate the final state of the merge**.
+
+This kind of branch interaction is a big part of what makes Git such a powerful development tool. **We can not only create independent lines of development, but we can also share information between them by tying together their stories with a 3-way merge**.
 
 # 	* [Style the Rainbow Page](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
 
@@ -157,7 +160,7 @@ e1bc771 add a rainbow to crazy.html
 6a442fc Create index page for the message
 ```
 
-Notice that we skipped the staging step this time aroun.
+**Notice that we skipped the staging step this time around**.
 Instead of using git add, we passed the -a flag to git commit.
 This convenient parameter tells Git to automatically include all tracked files in the staged snapshot.
 Combined with the -m flag, we can stage and commit snapshots with a single command.
@@ -393,7 +396,7 @@ The following diagram reflects our repository's history before and after the mer
 
 ![Screen Shot 2020-05-25 at 9 40 01](https://user-images.githubusercontent.com/24994818/82822643-bb57bc80-9e6b-11ea-9d72-eb5c7f1d250c.png)
 
-Also notice that we have another fork in our history (the commit before master branches in two directions), which means we should expect to see another merge commit in the near future.
+**Also notice that we have another fork in our history (the commit before master branches in two directions), which means we should expect to see another merge commit in the near future**.
 
 # 	* [Complete the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
 
@@ -461,7 +464,7 @@ CONFLICT (content): Merge conflict in index.html
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-This is our first merge conflict. Conflicts occur when we try to merge branches that have edited the same content. Git does not know how to combine the two changes, so it stops to ask us what to do. We can see exactly what went wrong with the familiar git status command.
+**This is our first merge conflict**. **Conflicts occur when we try to merge branches that have edited the same content**. Git does not know how to combine the two changes, so it stops to ask us what to do. We can see exactly what went wrong with the familiar git status command.
 
 ```console
 $ git status
@@ -478,7 +481,7 @@ Unmerged paths:
 	both modified:   index.html
 ```
 
-We are looking at the staged snapshot of a merge commit. We never saw this with the first 3-way merge because we didn't have any conflicts to resolve. But now, Git stopped to let us modify files and resolve the conflict before committing the snapshot. The "Unmerged paths" section contains files that have conflict..
+We are looking at the staged snapshot of a merge commit. We never saw this with the first 3-way merge because we didn't have any conflicts to resolve. **But now, Git stopped to let us modify files and resolve the conflict before committing the snapshot**. The "Unmerged paths" section contains files that have conflict..
 
 Open up index.html and find the section that looks like:
 
@@ -490,7 +493,7 @@ Open up index.html and find the section that looks like:
 >>>>>>> crazy
 ```
 
-$ git went ahead and modified the conflicted file to show us exactly which lines are afflicted. The format of the above text show us the difference between the two versions of the file. 
+**Git went ahead and modified the conflicted file to show us exactly which lines are afflicted**. The format of the above text show us the difference between the two versions of the file. 
 
 The section labeled <<<<<<< HEAD show us the version in the current branch, while the part after the ======= shows the version in the crazy branch.
 
@@ -506,7 +509,9 @@ We can change the affected lines to whatever we want in order to resolve the con
 </ul>
 ```
 
-The <<<<<<<, =======, and >>>>>>> markers are only used to show us the conflict and should be deleted. Next, we need to tell Git that we are done resolving the conflict:
+**The `<<<<<<<`, `=======`, and `>>>>>>>` markers are only used to show us the conflict and should be deleted**. Next, we need to tell Git that we are done resolving the conflict:
+
+**That's right, all you have to do is add index.html to the staged snapshot to mark it as resolved**. 
 
 ```console
 $ git add index.html
@@ -523,18 +528,18 @@ Changes to be committed:
 	new file:   rainbow.html
 ```
 
-That's right, all you have to do is add index.html to the staged snapshot to mark it as resolved. Finally, complete the 3-way merge:
+Finally, complete the 3-way merge:
 
 ```console
 $ git commit 
 [master f79223d] Merge branch 'crazy'
 ```
 
-We didn't ue the -m flag to specify a message beacuse Git already gives us a default message for merge commits. It also gives us a "Conflict" list, which can be particularly handy when trying to figure out where something went wrong in a project. Save and close the file to create the merge commit.
+**We didn't use the -m flag to specify a message because Git already gives us a default message for merge commits**. It also gives us a "Conflict" list, which can be particularly handy when trying to figure out where something went wrong in a project. Save and close the file to create the merge commit.
 
 The final state of our project looks like the following.
 
-![Screen Shot 2020-05-25 at 18 50 28](https://user-images.githubusercontent.com/24994818/82848331-af461c00-9eb8-11ea-881c-3d0868d16c01.png)
+![Screen Shot 2021-03-13 at 17 38 18](https://user-images.githubusercontent.com/24994818/111052704-ec1cd880-8422-11eb-8f1e-ab9e40bc8f64.png)
 
 # 	* [Cleanup the feature Branches](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
 
