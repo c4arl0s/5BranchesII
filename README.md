@@ -1,6 +1,6 @@
 # [go back to content](https://github.com/c4arl0s/RysGitTutorial#rys-git-tutorial)
 
-# [5 Branches II RysGitTutorial - Content](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#go-back-to-content)
+# [5 Branches II - Content](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#go-back-to-content)
  * [Continue the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-continue-the-crazy-experiment)
  * [Merge the CSS Updates](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-merge-the-css-updates)
  * [Style the Rainbow Page](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-style-the-rainbow-page)
@@ -17,7 +17,7 @@
  * [Conclusion](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-conclusion)
  * [Quick Reference](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-quick-reference)
 
-# [5 Branches II RysGitTutorial](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# [5 Branches II RysGitTutorial](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 Now that you have covered the mechanics behind Git Branches, we can discuss the practical impact that they have on the software development process.
 Instead of introducing new commands, this module covers how the typical Git user applies this workflow to real projects, as well as some of the problems that arise in a branched environment.
@@ -30,7 +30,7 @@ Instead of introducing new commands, this module covers how the typical Git user
 Amid our exploration of Git branches, we will also discover that some merges cannot "fast-forwarded". When the history of two branches diverges, a dedicated commit is required to combine the branches. **This situation may also give rise to a merge conflict, which must be manually resolved before anything can be committed to the repository**.
 
 
-# 	* [Continue the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Continue the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 Let`s start by checking out the crazy branch.
 
@@ -66,7 +66,7 @@ This brings us to my rule-thumb for using git branches:
 Following these simple guidelines will have a dramatic impact on your programming efficiency.
 
 
-# 	* [Merge the CSS Updates](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Merge the CSS Updates](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 **Note that CSS formatting we merged into master is nowhere to be found**.
 This presents a bit of a problem if we want to experiment to reflect these updates.
@@ -117,7 +117,7 @@ The name comes from the internal method used to create the merge commit. **Git l
 
 This kind of branch interaction is a big part of what makes Git such a powerful development tool. **We can not only create independent lines of development, but we can also share information between them by tying together their stories with a 3-way merge**.
 
-# 	* [Style the Rainbow Page](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Style the Rainbow Page](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 Now that we have access to the CSS updates from master, we can continue developing our crazy experiment.
 Link the CSS stylesheet to rainbow.html by adding the following HTML on the line after title element
@@ -166,7 +166,7 @@ This convenient parameter tells Git to automatically include all tracked files i
 Combined with the -m flag, we can stage and commit snapshots with a single command.
 However, be careful not to include unintended files when using the -a flag.
 
-# 	* [Link to the Rainbow Page](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Link to the Rainbow Page](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 We still need to add  navigation link to the home page.
 Change the "Navigation section of index.html to the following.
@@ -210,7 +210,7 @@ e1bc771 add a rainbow to crazy.html
 6a442fc Create index page for the message
 ```
 
-# 	* [Fork an Alternative Rainbow](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Fork an Alternative Rainbow](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 Next, we are going to brainstorm an alternative to the current rainbow.html page.
 This is a perfect time to create another topic branch:
@@ -232,7 +232,7 @@ After creating th new branch, our repository's history looks like:
 
 ![Screen Shot 2020-05-25 at 8 26 51](https://user-images.githubusercontent.com/24994818/82816850-8181b880-9e61-11ea-8f1e-0019d14a9538.png)
 
-# 	* [Change the Rainbow](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Change the Rainbow](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 Change the colorful list in rainbow.html from:
 
@@ -282,7 +282,7 @@ The resulting project history is show below, with the first four commits ommitte
 ![Screen Shot 2020-05-25 at 8 49 40](https://user-images.githubusercontent.com/24994818/82818699-b5aaa880-9e64-11ea-9eff-305ed0bca27d.png)
 
 
-# 	* [Emergency Update](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Emergency Update](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 Our boss called in with some breaking news ! He needs us to update the site immediately, but what do we do with our rainbow.html developments? Well, the beauty of Git branches is that we can just leave them where they are and add the breaking news to master.
 
@@ -359,7 +359,7 @@ $ git commit -m "Add 1st news item"
 
 Text these additions in a browser to make sure that the links work, it is typo free, etc. If everything looks good, we can "publish" the changes by merging them into the stable master branch. Isolating this in a separate branch is not really necessary for our trivial example, but in the real world, this would give you the opportunity to run build tests without touching your stable project.
 
-# 	* [Publish the News Hotfix](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Publish the News Hotfix](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 Remember that to merge into the master branch, we first need to check it out.
 
@@ -398,7 +398,7 @@ The following diagram reflects our repository's history before and after the mer
 
 **Also notice that we have another fork in our history (the commit before master branches in two directions), which means we should expect to see another merge commit in the near future**.
 
-# 	* [Complete the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Complete the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 Ok, lets finish up our crazy experiment with one more commit.
 
@@ -449,7 +449,7 @@ b9f2b14 Merge branch 'master' into crazy
 6a442fc Create index page for the message
 ```
 
-# 	* [Publish the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Publish the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 We are finally ready to merge our crazy branch into master:
 
@@ -498,7 +498,7 @@ Open up index.html and find the section that looks like:
 
 The section labeled `<<<<<<< HEAD` show us the version in the current branch, while the part after the `=======` shows the version in the crazy branch.
 
-# 	* [Resolve the Merge Conflicts](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Resolve the Merge Conflicts](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 We can change the affected lines to whatever we want in order to resolve the conflict. **Edit the news section of index.html to keep changes from both versions**:
 
@@ -542,13 +542,13 @@ The final state of our project looks like the following.
 
 ![Screen Shot 2021-03-13 at 17 38 18](https://user-images.githubusercontent.com/24994818/111052704-ec1cd880-8422-11eb-8f1e-ab9e40bc8f64.png)
 
-# [Important conclusions about merging branches when you modify the same file](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# [Important conclusions about merging branches when you modify the same file](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 I tried to practice modifying this README.md file that you are reading, first I created a boldedSentencesModContinuation branch and I modified a section of the file (it was not the same line), I staged and commited, then I went back to master, I modified README.md file again, I worked on a different section of the file, staged and commited. When I tried to merge boldedSentencesModContinuation branch, it was successful, Why? Ok, this is why: I modified the same file, but this modification was not in the same line, so when you merge does not have any problem. Wooooow!
 
 You have to repeat the example modifying the README.md file in the same line.
 
-# 	* [Cleanup the feature Branches](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Cleanup the feature Branches](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 Since our crazy experiment has been successfully merged, we can get rid of our feature branches.
 
@@ -577,7 +577,7 @@ Deleted branch crazy-alt (was d247771).
 **Fast-forward merges are not reflected in the project history**. This is the tangible distinction between fast-forward merges and 3-way merges. The next module will discuss the appropiate usage of both and the potential complications of a non-linear history.
 
 
-#   * [Rename Branches Local and Remote](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+#   * [Rename Branches Local and Remote](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 **This is a new note about how to rename branches**. I remember use it when I couldn't rebase a branch over master, so I have to rename my branch as master and master as old-master
 
@@ -634,7 +634,7 @@ To https://github.com/c4arl0s/ToDoListApp.git
 
 git push origin :old-name new-name
 
-# 	* [Conclusion](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Conclusion](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 This module demonstrate the three most common uses of Git Branches:
 
@@ -643,7 +643,7 @@ This module demonstrate the three most common uses of Git Branches:
 3. To record the evolution of a project (master)
 
 
-# 	* [Quick Reference](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+# 	* [Quick Reference](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
 ```console
 $ git commit -a -m "messageToCommit"
