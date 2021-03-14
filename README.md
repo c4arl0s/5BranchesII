@@ -409,7 +409,7 @@ Switched to branch 'crazy'
 
 Note that the news article is nowhere to be found, as should be expected (this branch is completely isolated development environment).
 
-We will finish up our crazy experiment by adding a news item for it on the home page. Change the news list in index.html to the following:
+We will finish up our crazy experiment by adding a news item for it on the home page. **Change the news list in index.html to the following**:
 
 ```html
 <h2 style="color: #C00">News</h2>
@@ -418,8 +418,9 @@ We will finish up our crazy experiment by adding a news item for it on the home 
 </ul>
 ```
 
-Astute readers have probably observed that this directly conflicts with what we changed in the news-hotfix branch.
-We should not manually add in the other news item because it has no relationship with the current branch. In addition, there would be no way to make sure the links works because news-1.html does not exist in this branch. This may seem trivial, but imagine the errors that could be introduced had news-hotfix made dozens of different changes.
+**Astute readers have probably observed that this directly conflicts with what we changed in the news-hotfix branch**.
+
+**We should not manually add in the other news item because it has no relationship with the current branch**. In addition, there would be no way to make sure the links works because news-1.html does not exist in this branch. This may seem trivial, but imagine the errors that could be introduced had news-hotfix made dozens of different changes.
 
 We will simply stage and commit the snapshot as if there were no conflicts:
 
@@ -499,7 +500,7 @@ The section labeled `<<<<<<< HEAD` show us the version in the current branch, wh
 
 # 	* [Resolve the Merge Conflicts](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
 
-We can change the affected lines to whatever we want in order to resolve the conflict. Edit the news section of index.html to keep changes from both versions:
+We can change the affected lines to whatever we want in order to resolve the conflict. **Edit the news section of index.html to keep changes from both versions**:
 
 ```console
 <h2 style="color: #C00">News</h2>
@@ -528,11 +529,11 @@ Changes to be committed:
 	new file:   rainbow.html
 ```
 
-Finally, complete the 3-way merge:
+**Finally, complete the 3-way merge**:
 
 ```console
 $ git commit 
-[master f79223d] Merge branch 'crazy'
+[master f79223d] Merge branch 'crazy**'
 ```
 
 **We didn't use the -m flag to specify a message because Git already gives us a default message for merge commits**. It also gives us a "Conflict" list, which can be particularly handy when trying to figure out where something went wrong in a project. Save and close the file to create the merge commit.
