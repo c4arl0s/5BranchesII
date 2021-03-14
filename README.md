@@ -17,7 +17,7 @@
  * [Conclusion](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-conclusion)
  * [Quick Reference](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-quick-reference)
 
-# [5 Branches II RysGitTutorial](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
+# [5 Branches II](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
 
 Now that you have covered the mechanics behind Git Branches, we can discuss the practical impact that they have on the software development process.
 Instead of introducing new commands, this module covers how the typical Git user applies this workflow to real projects, as well as some of the problems that arise in a branched environment.
@@ -27,7 +27,7 @@ Instead of introducing new commands, this module covers how the typical Git user
 > For example, we have been using master as the stable branch for our example project, and we have also used a temporary branch to add some CSS formatting.
 **Temporary branches like the latter are called topic branches because they exist to develop a certain topic branches later in this module**.
 
-Amid our exploration of Git branches, we will also discover that some merges cannot "fast-forwarded". When the history of two branches diverges, a dedicated commit is required to combine the branches. **This situation may also give rise to a merge conflict, which must be manually resolved before anything can be committed to the repository**.
+**Amid our exploration of Git branches, we will also discover that some merges cannot "fast-forwarded**". When the history of two branches diverges, a dedicated commit is required to combine the branches. **This situation may also give rise to a merge conflict, which must be manually resolved before anything can be committed to the repository**.
 
 
 # 	* [Continue the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
