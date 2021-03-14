@@ -541,6 +541,12 @@ The final state of our project looks like the following.
 
 ![Screen Shot 2021-03-13 at 17 38 18](https://user-images.githubusercontent.com/24994818/111052704-ec1cd880-8422-11eb-8f1e-ab9e40bc8f64.png)
 
+# [Important conclusions about merging branches when you modify the same file](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+
+I tried to practice modifying this README.md file that you are reading, first I created a boldedSentencesModContinuation branch and I modified a section of the file (it was not the same line), I staged and commited, then I went back to master, I modified README.md file again, I worked on a different section of the file, staged and commited. When I tried to merge boldedSentencesModContinuation branch, it was successful, Why? Ok, this is why: I modified the same file, but this modification was not in the same line, so when you merge does not have any problem. Wooooow!
+
+You have to repeat the example modifying the README.md file in the same line.
+
 # 	* [Cleanup the feature Branches](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
 
 Since our crazy experiment has been successfully merged, we can get rid of our feature branches.
