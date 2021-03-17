@@ -12,6 +12,8 @@
  * [Complete the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-complete-the-crazy-experiment)
  * [Publish the Crazy Experiment](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-publish-the-crazy-experiment)
  * [Resolve the Merge Conflicts](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-resolve-the-merge-conflicts)
+     * [Important conclusions about merging branches when you modify the same file](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#important-conclusions-about-merging-branches-when-you-modify-the-same-file)
+     * [Another example to conclude](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#another-example-to-conclude)
  * [Cleanup the feature Branches](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-cleanup-the-feature-branches)
  * [Rename Branches Local and Remote](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-rename-branches-local-and-remote)
  * [Conclusion](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#-conclusion)
@@ -547,6 +549,29 @@ The final state of our project looks like the following.
 I tried to practice modifying this README.md file that you are reading, first I created a boldedSentencesModContinuation branch and I modified a section of the file (it was not the same line), I staged and commited, then I went back to master, I modified README.md file again, I worked on a different section of the file, staged and commited. When I tried to merge boldedSentencesModContinuation branch, it was successful, Why? Ok, this is why: I modified the same file, but this modification was not in the same line, so when you merge does not have any problem. Wooooow!
 
 You have to repeat the example modifying the README.md file in the same line.
+
+# [Another example to conclude](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
+
+1. On master, I modified the link to go back to content to each section. Staged and committed.
+2. On master, I went back to the last commit and I created a modifyIntroduction branch.
+3. On modifyIntroduction, I fixed Introduction section, this old version kept the same link to go back to content menu. Staged and commited.
+4. I went back to master, then I did a `$ git merge modifyIntroduction`
+
+What happened?: It does exist a merge conflict. Why ? Because one of the lines was modified
+
+```console
+<<<<<<< HEAD
+# [5 Branches II RysGitTutorial](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
+=======
+# [5 Branches II ](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii-rysgittutorial---content)
+>>>>>>> modifyIntroduction
+```
+
+This was the only line that throws confliction. I would expect that the lines where I changed the link also conflicted, but it doesn't.
+
+Git kept the changes that the `8b12a63 Modify links to go back to content menu` committed. It gives preference the changes on the branch master, so there is no conflict with the modifyIntroduction master. **So git merge the changes of modifyIntroduction into Master, it keeps master changes**.
+
+[as exercise, draw how the diagram would looks like]  
 
 # 	* [Cleanup the feature Branches](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
