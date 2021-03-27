@@ -226,10 +226,8 @@ $ git checkout crazy-alt
 Switched to branch 'crazy-alt'
 ```
 
-Remember, we can do whatever we want here without worrying about either crazy o master.
-When git branch creates a branch, it uses the current HEAD as the starting point for the new branch.
-This meeans that we begin with the same files as crazy (if we called git branch from master, we would have to re-create rainbow.html).
-After creating th new branch, our repository's history looks like:
+Remember, we can do whatever we want here without worrying about either crazy o master. **When git branch creates a branch, it uses the current HEAD as the starting point for the new branch**. This means that we begin with the same files as crazy (if we called git branch from master, we would have to re-create rainbow.html).
+After creating the new branch, our repository's history looks like:
 
 
 ![Screen Shot 2020-05-25 at 8 26 51](https://user-images.githubusercontent.com/24994818/82816850-8181b880-9e61-11ea-8f1e-0019d14a9538.png)
@@ -288,9 +286,9 @@ The resulting project history is show below, with the first four commits ommitte
 
 Our boss called in with some breaking news ! He needs us to update the site immediately, but what do we do with our rainbow.html developments? Well, the beauty of Git branches is that we can just leave them where they are and add the breaking news to master.
 
-We will use what is called a hotfix branch to create and test the news updates. In contrast to our relatively long-running feature branch (crazy), hotfix branches are used to quickly patch a production release.
+**We will use what is called a hotfix branch to create and test the news updates**. In contrast to our relatively long-running feature branch (crazy), hotfix branches are used to quickly patch a production release.
 
-For example: you would use a hotfix branch to fix a time-sensitive bug in a public software project. This distinction is useful for demonstrating when it is appropiate to create a new branch, but it is purely conceptual - a branch is a branch according to Git
+> For example: you would use a hotfix branch to fix a time-sensitive bug in a public software project. This distinction is useful for demonstrating when it is appropiate to create a new branch, but it is purely conceptual - a branch is a branch according to Git
 
 ```console
 $ git checkout master
@@ -359,7 +357,7 @@ $ git commit -m "Add 1st news item"
  create mode 100644 news-1.html
 ```
 
-Text these additions in a browser to make sure that the links work, it is typo free, etc. If everything looks good, we can "publish" the changes by merging them into the stable master branch. Isolating this in a separate branch is not really necessary for our trivial example, but in the real world, this would give you the opportunity to run build tests without touching your stable project.
+Text these additions in a browser to make sure that the links work, it is typo free, etc. **If everything looks good, we can "publish" the changes by merging them into the stable master branch**. Isolating this in a separate branch is not really necessary for our trivial example, but in the real world, this would give you the opportunity to run build tests without touching your stable project.
 
 # 	* [Publish the News Hotfix](https://github.com/c4arl0s/5BranchesIIRysGitTutorial#5-branches-ii---content)
 
@@ -567,7 +565,7 @@ What happened?: It does exist a merge conflict. Why ? Because one of the lines w
 >>>>>>> modifyIntroduction
 ```
 
-This was the only line that throws confliction. I would expect that the lines where I changed the link also conflicted, but it doesn't.
+This was the only line that throws confliction. I would expect that the lines where I changed the link also conflicted, but it didn't.
 
 Git kept the changes that the `8b12a63 Modify links to go back to content menu` committed. It gives preference the changes on the branch master, so there is no conflict with the modifyIntroduction master. **So git merge the changes of modifyIntroduction into Master, it keeps master changes**.
 
